@@ -51,7 +51,7 @@ void PrintArr3() {
 			cout << c;
 	cout << endl;
 
-	//I doubt that i get assigned the correct type here...
+	//I doubt that i gets assigned the correct type here...
 	for (auto i = 0; i < 3; ++i)
 		for (auto j = 0; j < 4; ++j)
 			cout << ia[i][j];
