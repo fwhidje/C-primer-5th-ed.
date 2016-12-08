@@ -19,7 +19,7 @@ void foo() {
 
 //Exercise 3.39
 //Checks for equality.
-bool stringComp(const string& s1, const string& s2) {
+bool string_comp(const string& s1, const string& s2) {
 	if (s1.length() != s2.length())
 		return 0;
 
@@ -31,7 +31,7 @@ bool stringComp(const string& s1, const string& s2) {
 }
 
 //Exercise 3.39 b
-bool cstringComp(const char* a1, const char* a2) {
+bool cstring_comp(const char* a1, const char* a2) {
 	//This also guarantees that the last characters are equal (i.e. '\0')
 	if (strlen(a1) != strlen(a2))
 		return 0;
@@ -46,7 +46,7 @@ bool cstringComp(const char* a1, const char* a2) {
 
 //Exercise 3.40
 //This has to be hard-coded
-void strLitToChar() {
+void str_lit_char() {
 	char ca[] = "First";
 	char cb[] = "Second";
 	char cc[5 + 6 + 1];
@@ -61,11 +61,11 @@ void strLitToChar() {
 int main() {
 	string s1 = "test";
 	string s2 = "test";
-	cout << stringComp(s1, s2) << endl;
+	cout << string_comp(s1, s2) << endl;
 
 	char ca[] = { 't','e','\0' };
 	char cb[] = { 't','e','\0' };
-	cout << cstringComp(ca, cb) << endl;
+	cout << cstring_comp(ca, cb) << endl;
 
-	strLitToChar();
+	str_lit_char();
 }
