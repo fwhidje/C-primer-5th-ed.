@@ -20,7 +20,7 @@ void foo() {
 //Exercise 3.31
 //Due to limitations (cannot return an 'array'-type item) I've created a function
 //that takes pointers to the first and last items of the array.
-void arrayGen(int* b, int* e) {
+void array_gen(int* b, int* e) {
 	for (int* a = b, t = 0; a != e; ++a)
 		*a = t++;
 }
@@ -28,14 +28,14 @@ void arrayGen(int* b, int* e) {
 //Exercise 3.32
 //cfr. the previous exercise
 //Copies array1 into array2 until either a1 or a2 has reached the end of the array.
-void copyArray(int* b1, int* e1, int* b2, int* e2) {
+void copy_array(int* b1, int* e1, int* b2, int* e2) {
 	for (int* a1 = b1, *a2 = b2; a1 != e1 && a2 != e2; ++a1, ++a2)
 		*a2 = *a1;
 }
 
 //Exercise 3.32 b
 typedef vector<int>::iterator it;
-void copyVect(it b1, it e1, it b2, it e2) {
+void copy_vect(it b1, it e1, it b2, it e2) {
 	for (it a1 = b1, a2 = b2; a1 != e1 && a2 != e2; ++a1, ++a2)
 		*a2 = *a1;
 }
@@ -43,20 +43,20 @@ void copyVect(it b1, it e1, it b2, it e2) {
 
 int main() {
 	int temp[10];
-	arrayGen(begin(temp), end(temp));
+	array_gen(begin(temp), end(temp));
 	for (const auto& x : temp)
 		cout << x << ' ';
 	cout << endl;
 
 	int temp2[10] = {};
-	copyArray(begin(temp), end(temp), begin(temp2), end(temp2));
+	copy_array(begin(temp), end(temp), begin(temp2), end(temp2));
 	for (const auto& x : temp2)
 		cout << x << ' ';
 	cout << endl;
 
 	vector<int> v1 = { 1, 2, 3, 4, 5 };
 	vector<int> v2 = { 0, 0, 0, 0, 0, 0};
-	copyVect(v1.begin(), v1.end(), v2.begin(), v2.end());
+	copy_vect(v1.begin(), v1.end(), v2.begin(), v2.end());
 	for (const auto& x : v2)
 		cout << x << ' ';
 	cout << endl;
