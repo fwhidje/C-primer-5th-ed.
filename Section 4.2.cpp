@@ -14,7 +14,7 @@ bool IsOdd(const int i) {
 
  //Exercise 4.6 - variation
 bool IsOdd2(int i) {
-	return ((i & 1) == 1);
+	return (i & 1);
 }
 
 //Exercise 4.7
