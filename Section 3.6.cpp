@@ -2,7 +2,7 @@
 using namespace::std;
 
 //Exercise 3.43
-void PrintArr() {
+void printArr() {
 	int ia[3][4] = { {1,2,3,4},{5,6,7,8},{9,10,11,12} };
 	for (const int(&p)[4] : ia)
 		for (const int i : p)
@@ -21,7 +21,7 @@ void PrintArr() {
 }
 
 //Exercise 3.44
-void PrintArr2() {
+void printArr2() {
 	int ia[3][4] = { { 1,2,3,4 },{ 5,6,7,8 },{ 9,10,11,12 } };
 	typedef int row[4];
 	for (row& r : ia)
@@ -44,7 +44,7 @@ void PrintArr2() {
 }
 
 //Exercise 3.45
-void PrintArr3() {
+void printArr3() {
 	int ia[3][4] = { { 1,2,3,4 },{ 5,6,7,8 },{ 9,10,11,12 } };
 	for (const auto& r : ia)
 		for (const auto& c : r)
@@ -64,7 +64,7 @@ void PrintArr3() {
 }
 
 int main() {
-	PrintArr();
-	PrintArr2();
-	PrintArr3();
+	printArr();
+	printArr2();
+	printArr3();
 }
