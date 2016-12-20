@@ -9,7 +9,7 @@ void check_multiple() {
 	//hold: holds the previous string; smax: holds the most duplicated string; str: holds the current string
 	string hold, smax, str;
 	while (cin >> str){
-		//increments the counter is the currect and previous string are equal
+		//increments the counter if the currect and previous string are equal
 		if (str == hold) {
 			++cnt;
 			//checks whether the currently counted word has the highest number of duplicates
