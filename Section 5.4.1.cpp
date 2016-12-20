@@ -12,7 +12,7 @@ void check_multiple() {
 		//increments the counter if the currect and previous string are equal
 		if (str == hold) {
 			++cnt;
-			//checks whether the currently counted word has the highest number of duplicates
+			//checks whether the currently counted string has the highest number of duplicates
 			if (cnt > imax) {
 				imax = cnt;
 				smax = hold;
