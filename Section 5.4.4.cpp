@@ -34,7 +34,7 @@ void test_length() {
 			((a.length() >= b.length()) ? a : b )) << endl;
 		cout << "Continue? y/n";
 		cin >> c;
-	} while (c[0] != 'n');
+	} while (cin && c[0] != 'n');
 }
 
 int main() {
